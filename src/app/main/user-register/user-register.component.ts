@@ -44,7 +44,7 @@ export class UserRegisterComponent implements OnInit {
 
   register() {
     this.http
-      .post('http://localhost:4000/api/v1/users/register', this.registerModel)
+      .post('http://50.18.85.202:4000/api/v1/users/register', this.registerModel)
       .subscribe((res: any) => {
         // console.log(res);
         this.router.navigateByUrl('/login');
