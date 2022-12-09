@@ -7,7 +7,7 @@ import { map } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  url = 'http://54.67.127.149:4000/api/v1/';
+  url = 'http://54.67.127.149.nip.io:4000/api/v1/';
 
   constructor(private http: HttpClient) {}
 

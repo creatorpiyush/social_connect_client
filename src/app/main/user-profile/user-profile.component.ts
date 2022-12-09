@@ -36,7 +36,7 @@ export class UserProfileComponent implements OnInit {
 
   userProfile(username: any) {
     this.http
-      .get(`http://54.67.127.149:4000/api/v1/profile/${username}`)
+      .get(`http://54.67.127.149.nip.io:4000/api/v1/profile/${username}`)
       .pipe(
         map((res: any) => {
           return res;
