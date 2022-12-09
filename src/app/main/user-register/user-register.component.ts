@@ -44,7 +44,7 @@ export class UserRegisterComponent implements OnInit {
 
   register() {
     this.http
-      .post('http://54.67.127.149.nip.io/api/v1/users/register', this.registerModel)
+      .post('https://54.67.127.149.nip.io/api/v1/users/register', this.registerModel)
       .subscribe((res: any) => {
         // console.log(res);
         this.router.navigateByUrl('/login');

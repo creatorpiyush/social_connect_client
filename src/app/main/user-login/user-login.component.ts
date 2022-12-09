@@ -42,7 +42,7 @@ export class UserLoginComponent implements OnInit {
 
   login() {
     this.http
-      .post('http://54.67.127.149.nip.io/api/v1/users/login', this.loginModel)
+      .post('https://54.67.127.149.nip.io/api/v1/users/login', this.loginModel)
       .subscribe(
         (res: any) => {
           // console.warn(res);
