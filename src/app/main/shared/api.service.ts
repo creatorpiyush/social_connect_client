@@ -7,7 +7,7 @@ import { map } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  url = 'http://50.18.85.202:4000/api/v1/';
+  url = 'http://localhost:4000/api/v1/';
 
   constructor(private http: HttpClient) {}
 

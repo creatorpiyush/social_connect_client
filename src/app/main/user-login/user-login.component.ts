@@ -42,7 +42,7 @@ export class UserLoginComponent implements OnInit {
 
   login() {
     this.http
-      .post('http://50.18.85.202:4000/api/v1/users/login', this.loginModel)
+      .post('http://localhost:4000/api/v1/users/login', this.loginModel)
       .subscribe(
         (res: any) => {
           // console.warn(res);

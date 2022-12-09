@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   userPage(username: any) {
-    window.location.href = `http://50.18.85.202:4200/users/${username}`;
+    window.location.href = `http://localhost:4200/users/${username}`;
   }
 
   logout() {
