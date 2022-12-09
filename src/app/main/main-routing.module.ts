@@ -1,3 +1,4 @@
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserLoginComponent } from './user-login/user-login.component';
@@ -22,6 +23,12 @@ const routes: Routes = [
     path: 'users/:username',
     component: UserProfileComponent,
     title: 'Profile | Social Connect',
+  },
+
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+    title: 'Page Not Found | Social Connect',
   },
 ];
 
