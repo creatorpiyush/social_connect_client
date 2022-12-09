@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+.box {
+  border: 2px dashed rgb(221, 135, 135);
+  padding: 1rem;
+  margin: 0 auto;
+  padding: auto;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}

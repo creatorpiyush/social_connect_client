@@ -1,0 +1,19 @@
+<div>
+  <!-- show all Posts -->
+  <div class="container w-75 p-2">
+    <div *ngFor="let post of posts">
+      <div class="card m-3">
+        <div class="card-body rounded shadow-lg">
+          <h5 class="card-title">{{ post?.postedBy }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ post?.postText }}</h6>
+          <p class="card-text">{{ post?.postDate | date:"medium"}}</p>
+          <p class="card-text">{{ post?.likes.length }} 👍</p>
+          <!-- Like to post -->
+          <button class="btn btn-primary" (click)="likePost(post?._id)">Like</button>
+          <a href="#" class="card-link">Card link 👍</a>
+          <a href="#" class="card-link">Another link 👎</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

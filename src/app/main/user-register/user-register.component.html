@@ -1,0 +1,53 @@
+<app-header></app-header>
+
+<div>
+    <div class="container m-auto text-center">
+
+        <h1>Register</h1>
+        <div class="card box bg-body shadow-lg p-2 w-50">
+            <form [formGroup]="formValue" (ngSubmit)="register()">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group p-1">
+                            <label for="firstName">First Name</label>
+                            <input type="text" formControlName="firstName" class="form-control" id="firstName" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group p-1">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" formControlName="lastName" class="form-control" id="lastName" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group p-1">
+                    <label for="username">Username</label>
+                    <input type="text" formControlName="username" class="form-control" id="username" />
+                </div>
+                <div class="form-group p-1">
+                    <label for="email">Email</label>
+                    <input type="email" formControlName="email" class="form-control" id="email" />
+                </div>
+                <div class="form-group p-1">
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password" class="form-control" id="password" />
+                </div>
+                <div class="form-group p-1">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" formControlName="confirmPassword" class="form-control"
+                        id="confirmPassword" />
+                </div>
+
+                <button type="submit" class="btn btn-primary" [disabled]="formValue.invalid">Register</button>
+            </form>
+        </div>
+        <div class="p-2">
+            Already have an account? <a routerLink="/login">Login</a>
+        </div>
+        <span class="pb-5"></span>
+    </div>
+</div>
+
+<app-footer></app-footer>

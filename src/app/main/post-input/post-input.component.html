@@ -1,0 +1,22 @@
+<div>
+  <!-- Post Input form taking Post and User Name from session -->
+  <div class="p-4 w-50 m-auto">
+    <div>
+      <form>
+        <div class="form-group">
+          <textarea class="form-control border-info" type="text" id="first_name" name="first_name"
+            [(ngModel)]="postData" placeholder="Write your post here..." rows="3">
+    </textarea>
+        </div>
+      </form>
+    </div>
+    <h3>{{ postData }}</h3>
+
+    <span *ngIf="postData?.length > 0">
+      <button type="button" class="btn btn-info" (click)="setValue()">
+        ✈️ Send
+      </button>
+    </span>
+
+  </div>
+</div>
