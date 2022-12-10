@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-user-login',
@@ -14,6 +15,7 @@ export class UserLoginComponent implements OnInit {
   loginModel: LoginModel = new LoginModel();
   formValue!: FormGroup;
   err: any = null;
+  apiUrl = environment.apiUrl;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -42,7 +44,7 @@ export class UserLoginComponent implements OnInit {
 
   login() {
     this.http
-      .post('https://54.67.127.149.nip.io/api/v1/users/login', this.loginModel)
+      .post(`${this.apiUrl}/api/v1/users/login`, this.loginModel)
       .subscribe(
         (res: any) => {
           // console.warn(res);

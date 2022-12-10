@@ -2,6 +2,7 @@ import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   isLogin: any = false;
+
+  apiUrl = environment.apiUrl;
 
   username: any = localStorage.getItem('username');
 
@@ -18,6 +21,7 @@ export class HeaderComponent implements OnInit {
     if (localStorage.getItem('email') !== null) {
       this.isLogin = true;
     }
+    console.log(this.apiUrl);
   }
 
   userPage(username: any) {

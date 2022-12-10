@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { RegisterModel } from './register.model';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-user-register',
@@ -13,6 +14,7 @@ export class UserRegisterComponent implements OnInit {
   registerModel: RegisterModel = new RegisterModel();
   formValue!: FormGroup;
   err: any = null;
+  apiUrl = environment.apiUrl;
 
   constructor(
     private FormBuilder: FormBuilder,
@@ -44,7 +46,7 @@ export class UserRegisterComponent implements OnInit {
 
   register() {
     this.http
-      .post('https://54.67.127.149.nip.io/api/v1/users/register', this.registerModel)
+      .post(`${this.apiUrl}/api/v1/users/register`, this.registerModel)
       .subscribe((res: any) => {
         // console.log(res);
         this.router.navigateByUrl('/login');

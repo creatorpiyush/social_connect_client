@@ -3,11 +3,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  url = 'https://54.67.127.149.nip.io/api/v1/';
+  apiUrl = environment.apiUrl;
+  url = `${this.apiUrl}/api/v1/`;
 
   constructor(private http: HttpClient) {}
 

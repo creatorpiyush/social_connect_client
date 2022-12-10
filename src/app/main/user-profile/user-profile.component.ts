@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
+import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
@@ -15,6 +17,7 @@ export class UserProfileComponent implements OnInit {
   userData: any = null;
   userToShow: any = null;
   isFollower: any = false;
+  apiUrl = environment.apiUrl;
 
   constructor(
     private route: ActivatedRoute,
@@ -36,7 +39,7 @@ export class UserProfileComponent implements OnInit {
 
   userProfile(username: any) {
     this.http
-      .get(`https://54.67.127.149.nip.io/api/v1/profile/${username}`)
+      .get(`${this.apiUrl}/api/v1/profile/${username}`)
       .pipe(
         map((res: any) => {
           return res;
