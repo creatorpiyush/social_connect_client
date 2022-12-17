@@ -91,6 +91,12 @@ export class UserProfileComponent implements OnInit {
   }
 
   showLikedPosts(liked: any) {
-    return [...new Set(liked.map((item: { group: any }) => item.group))].length;
+    const uniqueLiked = new Set();
+
+    liked.map((item: any) => {
+      uniqueLiked.add(item._id);
+    });
+
+    return uniqueLiked.size;
   }
 }
