@@ -1,3 +1,4 @@
+import { UsersComponent } from './users/users.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
@@ -17,6 +18,12 @@ const routes: Routes = [
     path: 'register',
     component: UserRegisterComponent,
     title: 'Register | Social Connect',
+  },
+
+  {
+    path: 'users',
+    component: UsersComponent,
+    title: 'Users | Social Connect',
   },
 
   {
