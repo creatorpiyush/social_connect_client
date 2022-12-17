@@ -33,4 +33,8 @@ export class PostListComponent implements OnInit {
       return data;
     });
   }
+
+  showLikes(likes: any) {
+    return [...new Set(likes)].length;
+  }
 }

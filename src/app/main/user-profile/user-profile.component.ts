@@ -85,4 +85,12 @@ export class UserProfileComponent implements OnInit {
         return;
       });
   }
+
+  showLikes(likes: any) {
+    return [...new Set(likes)].length;
+  }
+
+  showLikedPosts(liked: any) {
+    return [...new Set(liked.map((item: { group: any }) => item.group))].length;
+  }
 }

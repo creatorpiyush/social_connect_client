@@ -7,7 +7,7 @@
           <h5 class="card-title">{{ post?.postedBy }}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{ post?.postText }}</h6>
           <p class="card-text">{{ post?.postDate | date:"medium"}}</p>
-          <p class="card-text">{{ post?.likes.length }} 👍</p>
+          <p class="card-text">{{ showLikes(post?.likes) }} 👍</p>
           <!-- Like to post -->
           <button class="btn btn-primary" (click)="likePost(post?._id)">Like 👍</button>
         </div>
